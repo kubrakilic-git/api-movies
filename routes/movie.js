@@ -83,7 +83,9 @@ router.delete('/:movie_id', (req,res,next)=>{
     //istediğimiz hata mesajını bu şekilde verebiliriz. app.js de ekleme yaptık.
     if(!movie)
       next({ message: 'The movie was not found.', code:99});
-    res.json(movie);
+    res.json({
+      status:1
+    });
   }).catch((err)=>{
     res.json(err);
   });
