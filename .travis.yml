@@ -1,9 +1,15 @@
-language: node_js
-node_js:
-  -7
-before_install:
-  -npm install
-  -export NODE_ENV=production
-script:
-  -npm run test
- 
+{
+  "os": [
+    "windows"
+  ],
+  "script": [
+    "-npm run test"
+  ],
+  "node_js": [
+    "-7"
+  ],
+  "language": "node_js",
+  "before_install": [
+    "-npm install -export NODE_ENV=production"
+  ]
+}
