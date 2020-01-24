@@ -1,13 +1,9 @@
-{
-
-  "script": [
-    "-npm run test"
-  ],
-  "node_js": [
-    "-8"
-  ],
-  "language": "node_js",
-  "before_install": [
-    "-npm install -export NODE_ENV=production"
-  ]
-}
+language: node_js
+node_js:
+  -8
+before_install:
+  -npm install
+  -export NODE_ENV=production
+script:
+  -npm run test
+ 
